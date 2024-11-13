@@ -45,7 +45,7 @@ function NavBar() {
                 : 'hover:bg-stone-400 hover:border-stone-400 hover:rounded-2xl'}`}> <BookOpenIcon className="h-6 w-6 mr-1 text-stone-700" />Blogs</NavLink>
 
             <button className='h-7 pr-3 pb-2 '><NavLink to="/contact" className={({ isActive }) =>
-              ` flex items-center transition-colors duration-200 ${isActive
+              ` flex items-center  ${isActive
                 ? 'bg-stone-400 border-stone-400 rounded-2xl text-stone-700'
                 : 'hover:bg-stone-400 hover:border-stone-400 hover:rounded-2xl'}`}> <PhoneIcon className='h-6 w-6 mr-1 text-stone-700' />Contact Me</NavLink></button>
           </div>
