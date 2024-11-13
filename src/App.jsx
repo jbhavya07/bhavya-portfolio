@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-    <div className='bg-stone-200 min-h-screen'>
+    <div className='bg-stone-200 min-h-screen '>
       <BrowserRouter>
         <NavBar/>
         <Routes>
