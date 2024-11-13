@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import {  NavLink,Link, useLocation } from 'react-router-dom'
 import Clock from '../Clock/Clock'
 import { HomeIcon, UserIcon, BookOpenIcon, BriefcaseIcon, PhoneIcon } from '@heroicons/react/24/outline'
 
@@ -20,24 +20,34 @@ function NavBar() {
             {/* <div className='hover:bg-stone-400 hover:border-stone-400 hover:rounded-2xl'> */}
 
 
-            <Link to="/" className={({ isActive }) =>
-              `pl-3 flex items-center transition-colors duration-200 ${isActive
+            <NavLink to="/" className={({ isActive }) =>
+              `pl-3 flex items-center pb-1 ${isActive
                 ? 'bg-stone-400 border-stone-400 rounded-2xl text-stone-700'
-                : 'hover:bg-stone-400 hover:border-stone-400 hover:rounded-2xl'}`}><HomeIcon className={({isActive})=>`h-6 w-6 pr-1 ${
-                isActive ? 'text-stone-700' : 'text-stone-700'
-              }`} /> Home</Link>
+                : 'hover:bg-stone-400 hover:border-stone-400 hover:rounded-2xl'}`}><HomeIcon className="h-6 w-6 mr-1 "  /> Home</NavLink>
 
 
 
 
 
             {/* </div> */}
-            <Link to="/about" className='flex hover:bg-stone-400 hover:border-stone-400 hover:rounded-2xl'> <UserIcon className="h-6 w-6 pr-1 text-stone-700" /> About</Link>
+            <NavLink to="/about" className={({ isActive }) =>
+              ` flex items-center  pb-1 ${isActive
+                ? 'bg-stone-400 border-stone-400 rounded-2xl text-stone-700'
+                : 'hover:bg-stone-400 hover:border-stone-400 hover:rounded-2xl'}`}> <UserIcon className="h-6 w-6 mr-1 text-stone-700" /> About</NavLink>
 
-            <Link to="/projects" className='flex hover:bg-stone-400 hover:border-stone-400 hover:rounded-2xl'><BriefcaseIcon className="h-6 w-6 pr-1 text-stone-700" /> Projects</Link>
-            <Link to="/skills" className='flex hover:bg-stone-400 hover:border-stone-400 hover:rounded-2xl'> <BookOpenIcon className="h-6 w-6 pr-1 text-stone-700" />Blogs</Link>
+            <NavLink to="/projects" className={({ isActive }) =>
+              ` flex items-center  pb-1 ${isActive
+                ? 'bg-stone-400 border-stone-400 rounded-2xl text-stone-700'
+                : 'hover:bg-stone-400 hover:border-stone-400 hover:rounded-2xl'}`}><BriefcaseIcon className="h-6 w-6 mr-1 text-stone-700" /> Projects</NavLink>
+            <NavLink to="/skills" className={({ isActive }) =>
+              ` flex items-center  pb-1 ${isActive
+                ? 'bg-stone-400 border-stone-400 rounded-2xl text-stone-700'
+                : 'hover:bg-stone-400 hover:border-stone-400 hover:rounded-2xl'}`}> <BookOpenIcon className="h-6 w-6 mr-1 text-stone-700" />Blogs</NavLink>
 
-            <button className='h-7 pr-3 pb-2 hover:bg-stone-400 hover:border-stone-400 hover:rounded-2xl text-stone-700'><Link to="/contact" className='flex'> <PhoneIcon className='h-6 w-6 pr-1 text-stone-700' />Contact Me</Link></button>
+            <button className='h-7 pr-3 pb-2 '><NavLink to="/contact" className={({ isActive }) =>
+              ` flex items-center transition-colors duration-200 ${isActive
+                ? 'bg-stone-400 border-stone-400 rounded-2xl text-stone-700'
+                : 'hover:bg-stone-400 hover:border-stone-400 hover:rounded-2xl'}`}> <PhoneIcon className='h-6 w-6 mr-1 text-stone-700' />Contact Me</NavLink></button>
           </div>
         </div>
 
